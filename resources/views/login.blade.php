@@ -13,6 +13,15 @@
               <h4>Hello! let's get started</h4>
               <h6 class="fw-light">Sign In to continue.</h6>
               <form class="pt-3" action="/login" method="POST">
+                @if (Session::has('success'))
+                    <div class="alert alert-success">{{Session::get('success')}}</div>
+                        
+                    @endif
+                    @if (Session::has('fail'))
+                    <div class="alert alert-danger">{{Session::get('fail')}}</div>
+                        
+                    @endif
+                @csrf
                 <div class="form-group">
                   <input type="email" class="form-control form-control-lg" id="exampleInputEmail1" placeholder="Username">
                 </div>

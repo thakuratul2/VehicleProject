@@ -13,6 +13,7 @@
               <h4>Hello! let's get started</h4>
               <h6 class="fw-light">Sign Up to continue.</h6>
               <form class="pt-3" action="/register" method="POST">
+                @csrf
                 <div class="form-group">
                   <input type="email" class="form-control form-control-lg" id="email" name="email" placeholder="Email Address">
                 </div>
@@ -20,10 +21,10 @@
                     <input type="password" class="form-control form-control-lg" id="pass" name="password" placeholder="Password">
                   </div>
                 <div class="form-group">
-                  <input type="password" class="form-control form-control-lg" id="cpass" name="confirm" placeholder="Confirm Password">
+                  <input type="password" class="form-control form-control-lg" id="cpass" name="cpassword" placeholder="Confirm Password">
                 </div>
                 <div class="mt-3">
-                  <a class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" href="../../index.html">SIGN UP</a>
+                  <button class="btn btn-primary w-100" type="submit">Create Account</button>
                 </div>
                 <div class="my-2 d-flex justify-content-between align-items-center">
                   <div class="form-check">

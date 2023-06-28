@@ -21,3 +21,6 @@ Route::get('/', function () {
 //auth pages access
 Route::get('/login',[LoginController::class,'Login'])->name('login.page');
 Route::get('/register',[RegisterController::class,'Register'])->name('register.page');
+
+//auth code
+Route::post('/register',[RegisterController::class,'NewMember']);
