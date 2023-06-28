@@ -19,14 +19,14 @@ class RegisterController extends Controller
             
             'email'=> 'required|email|unique:members',
             'password'=>'required|min:8|max:12',
-            'cpassword'=>'required|min:8|max:12'
+            
         ]);
 
         $memberdata = new member;
 
         $memberdata->email = $req->email;
         $memberdata->password = Hash::make($req->password);
-        $memberdata->cpassword = Hash::make($req->cpassword);
+        //$memberdata->cpassword = Hash::make($req->cpassword);
 
        $res =  $memberdata->save();
 

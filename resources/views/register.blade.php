@@ -15,14 +15,17 @@
               <form class="pt-3" action="/register" method="POST">
                 @csrf
                 <div class="form-group">
+                  <input type="text" class="form-control form-control-lg" id="username" name="username" placeholder="Username">
+                </div>
+                <div class="form-group">
                   <input type="email" class="form-control form-control-lg" id="email" name="email" placeholder="Email Address">
                 </div>
                 <div class="form-group">
                     <input type="password" class="form-control form-control-lg" id="pass" name="password" placeholder="Password">
                   </div>
-                <div class="form-group">
+                {{-- <div class="form-group">
                   <input type="password" class="form-control form-control-lg" id="cpass" name="cpassword" placeholder="Confirm Password">
-                </div>
+                </div> --}}
                 <div class="mt-3">
                   <button class="btn btn-primary w-100" type="submit">Create Account</button>
                 </div>
