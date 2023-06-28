@@ -8,6 +8,6 @@ class AdminController extends Controller
 {
     //
     public function Admin(){
-        return view('admin');
+        return view('AdminPanel.admin');
     }
 }

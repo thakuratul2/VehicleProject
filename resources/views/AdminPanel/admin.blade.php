@@ -1,4 +1,5 @@
-@include('inc.nav')
+@include('AdminPanel.inc.nav')
+
 <div class="container-scroller">
     <div class="row p-0 m-0 proBanner" id="proBanner">
       <div class="col-md-12 p-0 m-0">
@@ -1096,4 +1097,4 @@
           </div>
         </div>
 
-        @include('inc.foot')
+        @include('AdminPanel.inc.foot')
