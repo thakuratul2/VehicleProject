@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\member;
 use Illuminate\Support\Facades\Hash;
+use Session;
 
 class LoginController extends Controller
 {
@@ -30,6 +31,14 @@ class LoginController extends Controller
            }
         }else{
             return back()->with('fail','Something Wrong!');
+        }
+
+    }
+
+    public function Logout(){
+        if(Session::has('loginId')){
+            Session::pull('loginId');
+            return redirect('login');
         }
     }
 }

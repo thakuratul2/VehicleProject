@@ -28,6 +28,7 @@ Route::get('/register',[RegisterController::class,'Register'])->name('register.p
 //auth code
 Route::post('/login',[LoginController::class,'LoginNew']);
 Route::post('/register',[RegisterController::class,'NewMember']);
+Route::get('/logout',[LoginController::class,'Logout']);
 
 //admin panel
 Route::get('/adminpanel',[AdminController::class,'Admin'])->name('admin.page');
