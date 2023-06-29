@@ -19,6 +19,6 @@ class AdminController extends Controller
             $data = member::where('uid','=',Session::get('loginId'))->first();
 
         }
-        return view('adminpanel.admin',compact('data'));
+        return redirect('adminpanel.admin',compact('data'));
     }
 }
